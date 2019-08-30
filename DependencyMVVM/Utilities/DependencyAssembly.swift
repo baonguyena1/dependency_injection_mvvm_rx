@@ -15,25 +15,34 @@ extension SwinjectStoryboard {
         registerStoryboards()
         registerViewModels()
         registerServices()
-        registerHandlers()
     }
     
     class func registerStoryboards() {
         Container.loggingFunction = nil
+        defaultContainer.storyboardInitCompleted(UserListViewController.self) { (r, c) in
+            c.model = r.resolve(UserListViewModel.self)
+            c.viewControllerInjector = r.resolve(ViewControllerInjector.self)
+        }
         
     }
     
     class func registerViewModels() {
-        
-    }
-    
-    class func registerServices() {
-        defaultContainer.register(ViewControllerInjecting.self) { _ in
-            ViewControllerInjector()
+        defaultContainer.register(UserListViewModel.self) { r in
+            let viewModel = UserListViewModel()
+            viewModel.service = r.resolve(UserService.self)
+            return viewModel
         }
     }
     
-    class func registerHandlers() {
+    class func registerServices() {
+        defaultContainer.register(ViewControllerInjecting.self) { _ in ViewControllerInjector() }.inObjectScope(.container)
         
+        defaultContainer.register(APIRequestHandler.self) { _ in APIRequestHandler() }.inObjectScope(.container)
+        
+        defaultContainer.register(UserService.self) { r in
+            let service = UserService()
+            service.apiHandler = r.resolve(APIRequestHandler.self)
+            return service
+        }
     }
 }

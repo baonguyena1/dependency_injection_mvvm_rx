@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 class UserService: APIInjector {
     var apiHandler: APIRequestHandler!
     
-    func getUsers() {
-        
+    func getUsers() -> Single<[User]> {
+        let request = APIRequest(endpoint: .users)
+        return apiHandler.sendRequestResponseArray(request)
     }
 }

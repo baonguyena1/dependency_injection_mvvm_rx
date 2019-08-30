@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  UserListViewController.swift
 //  DependencyMVVM
 //
 //  Created by Bao Nguyen on 8/30/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class UserListViewController: UIViewController, ControllerInjector {
+    var viewControllerInjector: ViewControllerInjecting!
+    var model: UserListViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
-
 }
-
