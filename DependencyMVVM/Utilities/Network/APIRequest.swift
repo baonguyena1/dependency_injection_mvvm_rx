@@ -26,4 +26,14 @@ struct APIRequest {
         self.headers = headers
         self.encoding = encoding
     }
+    
+    init(endpoint: EndPoint,
+         parameters: Parameters? = nil,
+         encoding: ParameterEncoding = JSONEncoding.default) {
+        self.url = endpoint.url
+        self.method = endpoint.method
+        self.parameters = parameters
+        self.headers = endpoint.headers
+        self.encoding = encoding
+    }
 }

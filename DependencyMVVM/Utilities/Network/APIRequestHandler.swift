@@ -10,6 +10,10 @@ import Foundation
 import Alamofire
 import RxSwift
 
+protocol APIInjector {
+    var apiHandler: APIRequestHandler! { get set }
+}
+
 class APIRequestHandler {
     private var manager: Alamofire.SessionManager = {
         let serverTrustPolicies: [String: ServerTrustPolicy] = [

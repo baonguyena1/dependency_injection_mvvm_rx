@@ -21,6 +21,8 @@
 		9B39277F2318D7EE0044E3FF /* DataRequest+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927782318D7EE0044E3FF /* DataRequest+Helper.swift */; };
 		9B3927802318D7EE0044E3FF /* String+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927792318D7EE0044E3FF /* String+Helper.swift */; };
 		9B3927812318D7EE0044E3FF /* ViewControllerInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39277B2318D7EE0044E3FF /* ViewControllerInjector.swift */; };
+		9B3927832318D9B00044E3FF /* Constants+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927822318D9B00044E3FF /* Constants+Networking.swift */; };
+		9B3927852318E38F0044E3FF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927842318E38F0044E3FF /* UserService.swift */; };
 		9FCCC1419F955919D6A1512E /* Pods_DependencyMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0C4806E29D6B5147021CC6 /* Pods_DependencyMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		9B3927782318D7EE0044E3FF /* DataRequest+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+Helper.swift"; sourceTree = "<group>"; };
 		9B3927792318D7EE0044E3FF /* String+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Helper.swift"; sourceTree = "<group>"; };
 		9B39277B2318D7EE0044E3FF /* ViewControllerInjector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerInjector.swift; sourceTree = "<group>"; };
+		9B3927822318D9B00044E3FF /* Constants+Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+Networking.swift"; sourceTree = "<group>"; };
+		9B3927842318E38F0044E3FF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		9E32E50C1B131B1D80D7DDB6 /* Pods-DependencyMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVMTests/Pods-DependencyMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD732E3C55E6D279FD0C9EA8 /* Pods-DependencyMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.release.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D9D594432E62A49E54942850 /* Pods-DependencyMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -171,6 +175,7 @@
 		9B3927732318D7EE0044E3FF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				9B3927822318D9B00044E3FF /* Constants+Networking.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				9B39277B2318D7EE0044E3FF /* ViewControllerInjector.swift */,
+				9B3927842318E38F0044E3FF /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -395,7 +401,9 @@
 				9B39277F2318D7EE0044E3FF /* DataRequest+Helper.swift in Sources */,
 				9B3927812318D7EE0044E3FF /* ViewControllerInjector.swift in Sources */,
 				9B39277C2318D7EE0044E3FF /* DependencyAssembly.swift in Sources */,
+				9B3927852318E38F0044E3FF /* UserService.swift in Sources */,
 				9B39277D2318D7EE0044E3FF /* APIRequest.swift in Sources */,
+				9B3927832318D9B00044E3FF /* Constants+Networking.swift in Sources */,
 				9B3927622318D7A50044E3FF /* Cat.swift in Sources */,
 				9B39277E2318D7EE0044E3FF /* APIRequestHandler.swift in Sources */,
 			);

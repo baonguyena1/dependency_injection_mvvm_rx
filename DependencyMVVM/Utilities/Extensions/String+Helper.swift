@@ -9,3 +9,9 @@
 import Foundation
 
 extension String: Error {}
+
+extension String {
+    var urlEscaped: String {
+        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+    }
+}
