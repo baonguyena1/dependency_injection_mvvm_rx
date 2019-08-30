@@ -11,6 +11,14 @@ import UIKit
 class UserListViewController: UIViewController, ControllerInjector {
     var viewControllerInjector: ViewControllerInjecting!
     var model: UserListViewModel!
+    
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
+        return activityIndicator
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
