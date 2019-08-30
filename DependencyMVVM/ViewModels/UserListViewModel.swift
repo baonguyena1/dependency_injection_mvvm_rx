@@ -21,6 +21,7 @@ class UserListViewModel: ViewModelType {
     struct Output {
         var users = PublishRelay<[User]>()
         var error = PublishRelay<String>()
+        var isLoading = PublishRelay<Bool>()
     }
 
     private let bag = DisposeBag()
@@ -31,11 +32,14 @@ class UserListViewModel: ViewModelType {
     }
     
     func getUsers() {
+        output.isLoading.accept(true)
         service.getUsers()
             .subscribe(onSuccess: { [weak self] (users) in
                 self?.output.users.accept(users)
+                self?.output.isLoading.accept(false)
             }) { [weak self] (error) in
                 self?.output.error.accept(error.localizedDescription)
+                self?.output.isLoading.accept(false)
             }
             .disposed(by: self.bag)
     }
