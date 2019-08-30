@@ -7,6 +7,7 @@ def pod_lib
   pod 'SwinjectStoryboard'
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'SwiftLint'
 end
 
 target 'DependencyMVVM' do

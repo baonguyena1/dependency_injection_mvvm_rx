@@ -24,11 +24,12 @@
 		9B3927872318FD710044E3FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927862318FD710044E3FF /* User.swift */; };
 		9B3927892318FE050044E3FF /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3927882318FE050044E3FF /* Company.swift */; };
 		9B39278B2318FE0B0044E3FF /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39278A2318FE0B0044E3FF /* Address.swift */; };
-		9B39278D2318FE100044E3FF /* Geo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39278C2318FE100044E3FF /* Geo.swift */; };
+		9B39278D2318FE100044E3FF /* Geometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39278C2318FE100044E3FF /* Geometry.swift */; };
 		9B392790231907A30044E3FF /* UserListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39278F231907A30044E3FF /* UserListViewModel.swift */; };
 		9B392792231908F60044E3FF /* Constants+ViewIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B392791231908F60044E3FF /* Constants+ViewIdentifiers.swift */; };
 		9B39279423190AC60044E3FF /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39279323190AC60044E3FF /* UserListViewController.swift */; };
 		9B39279623190C120044E3FF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39279523190C120044E3FF /* ViewModelType.swift */; };
+		9B3927982319221D0044E3FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9B3927972319221D0044E3FF /* .swiftlint.yml */; };
 		9FCCC1419F955919D6A1512E /* Pods_DependencyMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0C4806E29D6B5147021CC6 /* Pods_DependencyMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,11 +67,12 @@
 		9B3927862318FD710044E3FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9B3927882318FE050044E3FF /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9B39278A2318FE0B0044E3FF /* Address.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
-		9B39278C2318FE100044E3FF /* Geo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geo.swift; sourceTree = "<group>"; };
+		9B39278C2318FE100044E3FF /* Geometry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geometry.swift; sourceTree = "<group>"; };
 		9B39278F231907A30044E3FF /* UserListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModel.swift; sourceTree = "<group>"; };
 		9B392791231908F60044E3FF /* Constants+ViewIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ViewIdentifiers.swift"; sourceTree = "<group>"; };
 		9B39279323190AC60044E3FF /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		9B39279523190C120044E3FF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		9B3927972319221D0044E3FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		9E32E50C1B131B1D80D7DDB6 /* Pods-DependencyMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVMTests/Pods-DependencyMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD732E3C55E6D279FD0C9EA8 /* Pods-DependencyMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.release.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D9D594432E62A49E54942850 /* Pods-DependencyMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		9B3927332318D6F90044E3FF = {
 			isa = PBXGroup;
 			children = (
+				9B3927972319221D0044E3FF /* .swiftlint.yml */,
 				9B39273E2318D6F90044E3FF /* DependencyMVVM */,
 				9B3927532318D6F90044E3FF /* DependencyMVVMTests */,
 				9B39273D2318D6F90044E3FF /* Products */,
@@ -150,7 +153,7 @@
 		9B3927602318D7A50044E3FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9B39278C2318FE100044E3FF /* Geo.swift */,
+				9B39278C2318FE100044E3FF /* Geometry.swift */,
 				9B3927862318FD710044E3FF /* User.swift */,
 				9B3927882318FE050044E3FF /* Company.swift */,
 				9B39278A2318FE0B0044E3FF /* Address.swift */,
@@ -265,6 +268,7 @@
 				9B3927392318D6F90044E3FF /* Frameworks */,
 				9B39273A2318D6F90044E3FF /* Resources */,
 				4643734A73ECAA3879E42348 /* [CP] Embed Pods Frameworks */,
+				9B392799231922E40044E3FF /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -337,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3927982319221D0044E3FF /* .swiftlint.yml in Resources */,
 				9B39274A2318D6F90044E3FF /* LaunchScreen.storyboard in Resources */,
 				9B3927472318D6F90044E3FF /* Assets.xcassets in Resources */,
 				9B3927452318D6F90044E3FF /* User.storyboard in Resources */,
@@ -392,6 +397,24 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B392799231922E40044E3FF /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		CEDBCDC260EBB999D12089C6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,7 +460,7 @@
 				9B39277E2318D7EE0044E3FF /* APIRequestHandler.swift in Sources */,
 				9B3927872318FD710044E3FF /* User.swift in Sources */,
 				9B3927892318FE050044E3FF /* Company.swift in Sources */,
-				9B39278D2318FE100044E3FF /* Geo.swift in Sources */,
+				9B39278D2318FE100044E3FF /* Geometry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -35,11 +35,7 @@ class APIRequestHandler {
         return Single<T>.create(subscribe: { [weak self] (single) -> Disposable in
             guard let `self` = self else { return Disposables.create() }
             
-            let request = self.manager.request(request.url,
-                            method: request.method,
-                            parameters: request.parameters,
-                            encoding: request.encoding,
-                            headers: request.headers)
+            let request = self.manager.request(request.url, method: request.method, parameters: request.parameters, encoding: request.encoding, headers: request.headers)
                 .validate()
                 .responseDecodable(decoder: self.decoder) { (response: DataResponse<T>) in
                     switch response.result {

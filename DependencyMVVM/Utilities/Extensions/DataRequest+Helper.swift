@@ -64,10 +64,7 @@ extension DataRequest {
     }
     
     @discardableResult
-    func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil,
-                                        decoder: JSONDecoder = JSONDecoder(),
-                                        keyPath: String? = nil,
-                                        completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
+    func responseDecodable<T: Decodable>(queue: DispatchQueue? = nil, decoder: JSONDecoder = JSONDecoder(), keyPath: String? = nil, completionHandler: @escaping (DataResponse<T>) -> Void) -> Self {
         return response(queue: queue,
                         responseSerializer: DataRequest.decodableObjectSerializer(keyPath, decoder),
                         completionHandler: completionHandler)
