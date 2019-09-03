@@ -16,4 +16,9 @@ class UserService: APIInjector {
         let request = APIRequest(endpoint: .users)
         return apiHandler.sendRequestResponseArray(request)
     }
+    
+    func getUserProfile(userId: String) -> Single<User> {
+        let request = APIRequest(endpoint: .userProfile(userId))
+        return apiHandler.sendRequest(request)
+    }
 }
