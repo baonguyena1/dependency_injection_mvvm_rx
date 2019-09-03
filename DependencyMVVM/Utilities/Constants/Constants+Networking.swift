@@ -29,10 +29,8 @@ extension EndPoint {
     
     public var method: HTTPMethod {
         switch self {
-        case .users:
+        case .users, .userProfile:
             return HTTPMethod.get
-        case .userProfile:
-            return HTTPMethod.post
         }
     }
     

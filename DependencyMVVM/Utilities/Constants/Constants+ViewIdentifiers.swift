@@ -10,8 +10,9 @@ import Foundation
 
 struct ViewIdentifier {
     static var userListViewController: String { return "UserListViewController" }
+    static var userDetailViewController: String { return "UserDetailViewController" }
 }
 
 struct Storyboard {
-    static var main: String { return "Main" }
+    static var user: String { return "User" }
 }

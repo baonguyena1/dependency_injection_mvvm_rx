@@ -30,6 +30,11 @@
 		9B39279423190AC60044E3FF /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39279323190AC60044E3FF /* UserListViewController.swift */; };
 		9B39279623190C120044E3FF /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B39279523190C120044E3FF /* ViewModelType.swift */; };
 		9B3927982319221D0044E3FF /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 9B3927972319221D0044E3FF /* .swiftlint.yml */; };
+		9B63230A231E0D48002AC4D8 /* UserListItemCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B632309231E0D48002AC4D8 /* UserListItemCellViewModel.swift */; };
+		9B63230E231E113D002AC4D8 /* UsersListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63230D231E113D002AC4D8 /* UsersListItemCell.swift */; };
+		9B632310231E1159002AC4D8 /* CellIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63230F231E1159002AC4D8 /* CellIdentifier.swift */; };
+		9B632313231E15AE002AC4D8 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B632312231E15AE002AC4D8 /* UserDetailViewController.swift */; };
+		9B632315231E16D6002AC4D8 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B632314231E16D6002AC4D8 /* UserDetailViewModel.swift */; };
 		9FCCC1419F955919D6A1512E /* Pods_DependencyMVVMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0C4806E29D6B5147021CC6 /* Pods_DependencyMVVMTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +78,11 @@
 		9B39279323190AC60044E3FF /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		9B39279523190C120044E3FF /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		9B3927972319221D0044E3FF /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		9B632309231E0D48002AC4D8 /* UserListItemCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListItemCellViewModel.swift; sourceTree = "<group>"; };
+		9B63230D231E113D002AC4D8 /* UsersListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersListItemCell.swift; sourceTree = "<group>"; };
+		9B63230F231E1159002AC4D8 /* CellIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIdentifier.swift; sourceTree = "<group>"; };
+		9B632312231E15AE002AC4D8 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		9B632314231E16D6002AC4D8 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		9E32E50C1B131B1D80D7DDB6 /* Pods-DependencyMVVMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVMTests.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVMTests/Pods-DependencyMVVMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD732E3C55E6D279FD0C9EA8 /* Pods-DependencyMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.release.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D9D594432E62A49E54942850 /* Pods-DependencyMVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DependencyMVVM.debug.xcconfig"; path = "Target Support Files/Pods-DependencyMVVM/Pods-DependencyMVVM.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +132,7 @@
 		9B39273E2318D6F90044E3FF /* DependencyMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				9B63230B231E1115002AC4D8 /* Views */,
 				9B39278E2319076C0044E3FF /* ViewModels */,
 				9B39275F2318D7950044E3FF /* Controllers */,
 				9B3927602318D7A50044E3FF /* Models */,
@@ -145,7 +156,7 @@
 		9B39275F2318D7950044E3FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9B39279323190AC60044E3FF /* UserListViewController.swift */,
+				9B632311231E1593002AC4D8 /* UserList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +225,7 @@
 			children = (
 				9B3927782318D7EE0044E3FF /* DataRequest+Helper.swift */,
 				9B3927792318D7EE0044E3FF /* String+Helper.swift */,
+				9B63230F231E1159002AC4D8 /* CellIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,9 +243,44 @@
 			isa = PBXGroup;
 			children = (
 				9B39279523190C120044E3FF /* ViewModelType.swift */,
-				9B39278F231907A30044E3FF /* UserListViewModel.swift */,
+				9B632308231E0D24002AC4D8 /* UserList */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9B632308231E0D24002AC4D8 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				9B39278F231907A30044E3FF /* UserListViewModel.swift */,
+				9B632309231E0D48002AC4D8 /* UserListItemCellViewModel.swift */,
+				9B632314231E16D6002AC4D8 /* UserDetailViewModel.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		9B63230B231E1115002AC4D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B63230C231E111D002AC4D8 /* UserList */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B63230C231E111D002AC4D8 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				9B63230D231E113D002AC4D8 /* UsersListItemCell.swift */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		9B632311231E1593002AC4D8 /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				9B39279323190AC60044E3FF /* UserListViewController.swift */,
+				9B632312231E15AE002AC4D8 /* UserDetailViewController.swift */,
+			);
+			path = UserList;
 			sourceTree = "<group>";
 		};
 		B235256DBC79C06F9DF2E25C /* Pods */ = {
@@ -453,9 +500,14 @@
 				9B39277F2318D7EE0044E3FF /* DataRequest+Helper.swift in Sources */,
 				9B3927812318D7EE0044E3FF /* ViewControllerInjector.swift in Sources */,
 				9B39277C2318D7EE0044E3FF /* DependencyAssembly.swift in Sources */,
+				9B63230E231E113D002AC4D8 /* UsersListItemCell.swift in Sources */,
+				9B632310231E1159002AC4D8 /* CellIdentifier.swift in Sources */,
 				9B3927852318E38F0044E3FF /* UserService.swift in Sources */,
 				9B39279623190C120044E3FF /* ViewModelType.swift in Sources */,
 				9B39277D2318D7EE0044E3FF /* APIRequest.swift in Sources */,
+				9B632315231E16D6002AC4D8 /* UserDetailViewModel.swift in Sources */,
+				9B632313231E15AE002AC4D8 /* UserDetailViewController.swift in Sources */,
+				9B63230A231E0D48002AC4D8 /* UserListItemCellViewModel.swift in Sources */,
 				9B3927832318D9B00044E3FF /* Constants+Networking.swift in Sources */,
 				9B39277E2318D7EE0044E3FF /* APIRequestHandler.swift in Sources */,
 				9B3927872318FD710044E3FF /* User.swift in Sources */,
